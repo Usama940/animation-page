@@ -60,57 +60,69 @@ export default function App() {
 
             </div>
 
-            <div className="bg-[#37a0aa] w-80 h-auto rounded-lg p-3 flex flex-col justify-center items-center pb-15 ml-32">
+            <div className="bg-[#37a0aa] w-70 h-90 rounded-lg p-3 flex flex-col justify-center items-center pb-15 ml-32">
               <div className="w-[90%] h-auto p-13 bg-[#3FC0CB] shadow-lg rounded-lg mt-3"></div>
               <div className="w-[90%] h-auto p-5 bg-[#3FC0CB] shadow-lg rounded-lg mt-3"></div>
               <div className="w-[90%] h-auto p-5 bg-[#3FC0CB] shadow-lg rounded-lg mt-3"></div>
               <div className="w-[90%] h-auto p-5 bg-[#3FC0CB] shadow-lg rounded-lg mt-3"></div>
 
             </div>
-            <div class="relative w-64 h-64 -ml-90 mt-3">
+            {/* 1 line */}
+            <div class="relative w-64 h-64 -ml-75 mt-3 z-0">
 
               <div class="absolute left-0 top-0 border-l-2 border-white border-dashed h-[110%]"></div>
-
-
               <div class="absolute left-0 top-0 border-t-2 border-white border-dashed w-full"></div>
 
-
               <div class="absolute left-0 top-0 flex flex-col items-center space-y-10 mt-1 ml-[-6px] z-10">
-                <div class="w-3 h-3 rounded-full bg-white relative -top-2"></div>
-                <div class="w-3 h-3 rounded-full bg-white"></div>
-                <div class="w-3 h-3 rounded-full bg-white"></div>
-                <div class="w-3 h-3 rounded-full bg-white"></div>
-                <div class="w-3 h-3 rounded-full bg-white"></div>
+
+                <div class="w-2.5 h-2.5 rounded-full bg-white relative -top-2"></div>
+                <motion.div
+                  class="flex flex-col items-center space-y-10"
+                  animate={{ y: [0, -20, -20, 0, 0] }}
+                  transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <div class="w-2 h-2 rounded-full bg-white"></div>
+                  <div class="w-2 h-2 rounded-full bg-white"></div>
+                  <div class="w-2 h-2 rounded-full bg-white"></div>
+                </motion.div>
+                <div class="w-2.5 h-2.5 rounded-full bg-white mt-4"></div>
               </div>
             </div>
 
-            {/* 2 */}
-            <div class="relative w-64 h-64 -ml-40 mt-20 ">
+
+            {/* line 2 */}
+            <div class="relative w-64 h-65 -ml-45 mt-12 z-0">
 
               <div class="absolute left-0 top-0 border-l-2 border-white border-dashed h-[110%]"></div>
-
-
               <div class="absolute left-0 top-0 border-t-2 border-white border-dashed w-full"></div>
 
-
               <div class="absolute left-0 top-0 flex flex-col items-center space-y-10 mt-1 ml-[-6px] z-10">
-                <div class="w-3 h-3 rounded-full bg-white relative -top-2"></div>
-                <div class="w-3 h-3 rounded-full bg-white"></div>
-                <div class="w-3 h-3 rounded-full bg-white"></div>
-                <div class="w-3 h-3 rounded-full bg-white"></div>
-                <div class="w-3 h-3 rounded-full bg-white"></div>
+
+                <div class="w-2.5 h-2.5 rounded-full bg-white relative -top-2"></div>
+                <motion.div
+                  class="flex flex-col items-center space-y-10"
+                  animate={{ y: [0, -20, -20, 0, 0] }}
+                  transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <div class="w-2 h-2 rounded-full bg-white"></div>
+                  <div class="w-2 h-2 rounded-full bg-white"></div>
+                  <div class="w-2 h-2 rounded-full bg-white"></div>
+                  <div class="w-2 h-2 rounded-full bg-white"></div>
+                </motion.div>
+
+
               </div>
             </div>
           </div>
 
-          <div className="absolute -bottom-12 left-26 bg-[rgb(75,146,153)] w-40 h-42 rounded-lg shadow-2xl flex flex-col items-center justify-center text-center space-y-3 p-3 ">
+          <div className="absolute -bottom-17 left-26 bg-[rgb(75,146,153)] w-40 h-35 rounded-lg shadow-2xl flex flex-col items-center justify-center text-center space-y-3 p-3 z-10">
             <div className="relative w-full h-full">
               <motion.div
                 className="absolute"
-                style={{ top: 60, left: 20 }}
+                style={{ top: 30, left: 20 }}
                 animate={{
                   x: [0, -90, -90, 0, 0],
-                  y: [0, -110, -110, 0, 0],
+                  y: [0, -10, -10, 0, 0],
                 }}
                 transition={{
                   duration: 2.5,
@@ -146,7 +158,7 @@ export default function App() {
             className="absolute text-center"
             style={{ bottom: 90, left: 10 }}
             animate={{
-              x: [0, 100, 100, 0, 0],
+              x: [0, 70, 70, 0, 0],
               y: [0, -100, -100, 0, 0],
             }}
             transition={{
@@ -215,6 +227,7 @@ export default function App() {
             }}
             transition={{
               duration: 2.5,
+              times: [0, 0.25, 0.5, 0.75, 1],
               repeat: Infinity,
               repeatType: "loop",
               ease: "easeInOut",
